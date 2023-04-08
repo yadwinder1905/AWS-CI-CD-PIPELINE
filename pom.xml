@@ -43,41 +43,35 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-		<plugin>
-		  <groupId>org.projectlombok</groupId>
-		  <artifactId>lombok-maven-plugin</artifactId>
+      <plugins>
+        <plugin>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok-maven-plugin</artifactId>
           <version>1.18.8.0</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
               <goals>
-			    <goal>delombok</goal>
+                <goal>delombok</goal>
               </goals>
-			  <configuration>
+              <configuration>
                 <addOutputDirectory>false</addOutputDirectory>
                 <sourceDirectory>src/main/java</sourceDirectory>
                 <encoding>UTF-8</encoding>
               </configuration>
-			</execution>
+            </execution>
           </executions>
         </plugin>
-		<repositories>
-          <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-            <snapshots>
-              <enabled>false</enabled>
-            </snapshots>
-          </repository>
-          <repository>
-            <id>projectlombok</id>
-            <name>Lombok Repository</name>
-            <url>https://projectlombok.org/pom.xml</url>
-          </repository>
-        </repositories>  
-		</plugins>
-		<finalName>order-service</finalName>
-	</build>
+      </plugins>
+     <repositories>
+      <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <snapshots>
+          <enabled>false</enabled>
+        </snapshots>
+      </repository>
+     </repositories>
+    </build>
 
 </project>
