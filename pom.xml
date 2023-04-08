@@ -44,10 +44,24 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+		<plugin>
+		  <groupId>org.projectlombok</groupId>
+		  <artifactId>lombok-maven-plugin</artifactId>
+          <version>1.18.8.0</version>
+          <executions>
+            <execution>
+              <phase>generate-sources</phase>
+              <goals>
+			    <goal>delombok</goal>
+              </goals>
+			  <configuration>
+                <addOutputDirectory>false</addOutputDirectory>
+                <sourceDirectory>src/main/java</sourceDirectory>
+                <encoding>UTF-8</encoding>
+              </configuration>
+			</execution>
+          </executions>
+        </plugin>  
 		</plugins>
 		<finalName>order-service</finalName>
 	</build>
