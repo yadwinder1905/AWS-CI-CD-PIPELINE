@@ -61,7 +61,21 @@
               </configuration>
 			</execution>
           </executions>
-        </plugin>  
+        </plugin>
+		<repositories>
+          <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+          </repository>
+          <repository>
+            <id>projectlombok</id>
+            <name>Lombok Repository</name>
+            <url>https://projectlombok.org/pom.xml</url>
+          </repository>
+        </repositories>  
 		</plugins>
 		<finalName>order-service</finalName>
 	</build>
